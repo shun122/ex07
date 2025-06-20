@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Schedule</title>
-    <!-- CSSファイルをリンク -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <!-- タイトルをクリックするとclass.htmlに戻るリンク -->
         <a href="class.html"><h1>Class Schedule (時間割)</h1></a>
         <p class="my-name">相川 隼哉</p>
     </header>
 
     <nav>
         <ul>
-            <!-- ナビゲーションバーの各曜日へのリンク -->
             <li><a href="monday.html">Monday</a></li>
             <li><a href="tuesday.html">Tuesday</a></li>
             <li><a href="wednesday.html">Wednesday</a></li>
@@ -25,10 +22,78 @@
         </ul>
     </nav>
 
-    <main>
-        <!-- このページには時間割の具体的な内容を含めない -->
-        <p>This is the main schedule overview page.</p>
-        <p>Please select a day from the navigation bar to see the detailed timetable.</p>
+    <main class="timetable-main">
+        <h2>Weekly Timetable</h2>
+        <table class="class-timetable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="monday.html#period-1">Web Information System Design (GIGA/GI)</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="monday.html#period-3">Introduction to Global Environment</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="friday.html#period-3">Urban Systems Theory</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="monday.html#period-5">Algorithmic Design Lab</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="monday.html#period-6">Algorithmic Design Lab</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monday Schedule</title>
-    <!-- CSSファイルをリンク -->
+    <title>Friday Schedule</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <!-- タイトルをクリックするとclass.htmlに戻るリンク -->
         <a href="class.html"><h1>Class Schedule (時間割)</h1></a>
         <p class="my-name">相川 隼哉</p>
     </header>
 
     <nav>
         <ul>
-            <!-- ナビゲーションバーの各曜日へのリンク -->
             <li><a href="monday.html">Monday</a></li>
             <li><a href="tuesday.html">Tuesday</a></li>
             <li><a href="wednesday.html">Wednesday</a></li>
@@ -27,12 +24,18 @@
 
     <main>
         <h2>Friday's Classes</h2>
-        <div class="schedule-entry">
-            <h3>Office Software Introduction</h3>
-            <p>Friday 1st period</p>
-            <p>Learn how to use word processing software, spreadsheet software, presentation software, etc.</p>
+        <nav class="period-nav">
+            <ul>
+                <li><a href="#period-3">3rd Period</a></li>
+            </ul>
+        </nav>
+
+        <div id="period-3" class="schedule-entry">
+            <h3>Urban Systems Theory</h3>
+            <p>Friday 3rd period</p>
+            <p>Cities throughout history have been spaces where societal changes are most evident. This course focuses on the phenomenon of urbanization, which began in the late 18th century and progressed until the 20th century.</p>
+            <p>It examines the formation and development processes of cities from various aspects such as politics, economy, society, and culture, thereby considering the various issues cities face.</p>
         </div>
-        <!-- 他の月曜日の授業を追加する場合はここに記述 -->
     </main>
 </body>
 </html>

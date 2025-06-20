@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monday Schedule</title>
-    <!-- CSSファイルをリンク -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <!-- タイトルをクリックするとclass.htmlに戻るリンク -->
         <a href="class.html"><h1>Class Schedule (時間割)</h1></a>
         <p class="my-name">相川 隼哉</p>
     </header>
 
     <nav>
         <ul>
-            <!-- ナビゲーションバーの各曜日へのリンク -->
             <li><a href="monday.html">Monday</a></li>
             <li><a href="tuesday.html">Tuesday</a></li>
             <li><a href="wednesday.html">Wednesday</a></li>
@@ -27,12 +24,41 @@
 
     <main>
         <h2>Monday's Classes</h2>
-        <div class="schedule-entry">
-            <h3>Office Software Introduction</h3>
+        <nav class="period-nav">
+            <ul>
+                <li><a href="#period-1">1st Period</a></li>
+                <li><a href="#period-3">3rd Period</a></li>
+                <li><a href="#period-5">5th Period</a></li>
+                <li><a href="#period-6">6th Period</a></li>
+            </ul>
+        </nav>
+
+        <div id="period-1" class="schedule-entry">
+            <h3>Web Information System Design (GIGA/GI)</h3>
             <p>Monday 1st period</p>
-            <p>Learn how to use word processing software, spreadsheet software, presentation software, etc.</p>
+            <p>This course aims to deepen knowledge of information technology, life sciences, and environmental studies by comprehensively studying "Advanced Information Systems," "Advanced Area Design," "Advanced Life Sciences," "Environmental Design," and "Human Environment Sciences." It enhances expertise and application skills for research activities.</p>
+            <p>The Web has become an important foundation for providing information on the Internet and is indispensable. This class will cover Web technologies, starting with HTML, CSS, and JavaScript for Web page description, Web servers, and forms, and then move on to fundamental technologies such as XML and RDF.</p>
         </div>
-        <!-- 他の月曜日の授業を追加する場合はここに記述 -->
+
+        <div id="period-3" class="schedule-entry">
+            <h3>Introduction to Global Environment</h3>
+            <p>Monday 3rd period</p>
+            <p>The 21st century cannot be discussed without addressing global environmental issues. We are required to understand, think about, and act on environmental problems. This course systematically learns the realities and causes of global environmental problems, referencing major documents such as Al Gore's film "An Inconvenient Truth," UNDP's new environmental report, and IPCC reports.</p>
+            <p>The course will build up from global to regional environments, covering atmosphere, soil, water, plants, ecological systems, and ecosystem services, learning the principles of global environment from the basics.</p>
+        </div>
+
+        <div id="period-5" class="schedule-entry">
+            <h3>Algorithmic Design Lab</h3>
+            <p>Monday 5th period</p>
+            <p>Algorithmic Design Lab. (ADL) conducts research and practice on the architectural design process called "Algorithmic Design."</p>
+            <p>ADL explores the computability of architecture by transcribing all architectural design processes into computer algorithms. By doing so, what only humans can do and what designers should do, that is, the "incomputability" of architecture and cities, will emerge.</p>
+        </div>
+
+        <div id="period-6" class="schedule-entry">
+            <h3>Algorithmic Design Lab</h3>
+            <p>Monday 6th period</p>
+            <p>This is a continuation of Algorithmic Design Lab from the 5th period.</p>
+        </div>
     </main>
 </body>
 </html>

@@ -5,6 +5,7 @@ body {
     background-color: #f0f2f5; /* 背景色 */
     color: #333;
     line-height: 1.6;
+    overflow-y: scroll; /* Always display vertical scrollbars to avoid horizontal misalignment */
 }
 
 /* ヘッダーのスタイル */
@@ -61,8 +62,8 @@ nav {
 
 nav ul {
     list-style-type: none; /* リストのマーカーをなくす */
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove spaces at the beginning of bullet points */
+    padding: 0; /* Remove spaces at the beginning of bullet points */
     display: flex; /* Flexboxを使って横並びに */
     justify-content: center; /* 中央揃え */
     flex-wrap: wrap; /* 狭い画面で折り返す */
@@ -87,6 +88,43 @@ nav a:hover {
     color: #eee;
 }
 
+/* Period Navigation within daily pages */
+.period-nav {
+    background-color: #cddc39; /* A different color for period navigation */
+    padding: 8px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.period-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.period-nav li {
+    margin: 5px 10px;
+}
+
+.period-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.period-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+
 /* メインコンテンツのスタイル */
 main {
     padding: 20px;
@@ -97,6 +135,45 @@ main {
     box-shadow: 0 0 15px rgba(0,0,0,0.1); /* ボックスシャドウ */
     border-radius: 12px; /* 角丸 */
     overflow: hidden; /* float要素の回り込み対応 */
+}
+
+/* For the main timetable page (class.html) */
+.timetable-main {
+    text-align: center; /* Center the timetable */
+    background-color: white; /* Background is white */
+}
+
+/* Timetable styling */
+.class-timetable {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders to create single grid lines */
+    margin-top: 20px;
+    table-layout: fixed; /* Ensures uniform column width */
+}
+
+.class-timetable th,
+.class-timetable td {
+    border: solid 1px black; /* Add borders to the table */
+    padding: 10px;
+    text-align: center;
+    width: calc(100% / 6); /* Distributes width evenly among 6 columns (1 for period, 5 for days) */
+    vertical-align: middle; /* Vertically align content to the middle */
+}
+
+.class-timetable th {
+    background-color: lightblue; /* Color the header */
+    font-weight: bold;
+}
+
+.class-timetable td a {
+    text-decoration: none;
+    color: #007bff;
+    display: block; /* Make the link fill the entire cell for easier clicking */
+    padding: 0; /* Remove default padding from link to allow cell padding to control space */
+}
+
+.class-timetable td a:hover {
+    text-decoration: underline;
 }
 
 /* 時間割エントリーのスタイル */
@@ -138,6 +215,11 @@ main {
     main {
         margin: 10px;
         padding: 15px;
+    }
+    .class-timetable th,
+    .class-timetable td {
+        padding: 5px; /* Smaller padding on small screens */
+        font-size: 0.9em;
     }
 }
 
