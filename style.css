@@ -1,0 +1,158 @@
+/* 全体のリセット (オプションだが推奨) */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Interフォントを使用 */
+    background-color: #f0f2f5; /* 背景色 */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #ff9800; /* ナビゲーションバーの背景色をオレンジに */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 影を追加 */
+    border-bottom-left-radius: 8px; /* 角丸 */
+    border-bottom-right-radius: 8px; /* 角丸 */
+}
+
+/* タイトル (h1) のスタイル */
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* タイトルリンクのスタイル */
+header h1 a {
+    color: black; /* タイトルの色を常に黒にする */
+    text-decoration: none; /* 下線をなくす */
+    transition: color 0.3s ease; /* 色変化を滑らかに */
+}
+
+/* タイトルリンクの各種状態でのスタイルも同様に設定 */
+header h1 a:link,
+header h1 a:visited,
+header h1 a:hover,
+header h1 a:active {
+    color: black; /* どの状態でも色を黒に保つ */
+    text-decoration: none; /* どの状態でも下線をなくす */
+}
+
+/* 自分の名前のスタイル */
+.my-name {
+    text-align: right; /* 右寄せの指定 */
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+    padding-right: 15px;
+}
+
+/* ナビゲーションバーのスタイル */
+nav {
+    background-color: #ff9800; /* ナビゲーションバーの背景色をオレンジに */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 影を追加 */
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none; /* リストのマーカーをなくす */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexboxを使って横並びに */
+    justify-content: center; /* 中央揃え */
+    flex-wrap: wrap; /* 狭い画面で折り返す */
+}
+
+nav li {
+    margin: 5px 15px; /* 上下左右のマージン */
+}
+
+nav a {
+    text-decoration: none; /* ナビゲーションリンクの下線をなくす */
+    color: white; /* リンクの色 */
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 5px; /* 角丸 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 滑らかなトランジション */
+}
+
+/* ナビゲーションリンクのホバー時のスタイル */
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* ホバー時の背景色 */
+    color: #eee;
+}
+
+/* メインコンテンツのスタイル */
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* ボックスシャドウ */
+    border-radius: 12px; /* 角丸 */
+    overflow: hidden; /* float要素の回り込み対応 */
+}
+
+/* 時間割エントリーのスタイル */
+.schedule-entry {
+    background-color: #e8f5e9; /* 淡い緑の背景 */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 5px solid #4caf50; /* 左側に緑のボーダー */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.schedule-entry h3 {
+    margin-top: 0;
+    color: #2e7d32;
+    font-size: 1.4em;
+}
+
+.schedule-entry p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    .my-name {
+        font-size: 1em;
+    }
+    nav ul {
+        flex-direction: column; /* スマートフォンでは縦並び */
+        align-items: center;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    .my-name {
+        font-size: 0.9em;
+    }
+    nav a {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    main {
+        padding: 10px;
+    }
+}
