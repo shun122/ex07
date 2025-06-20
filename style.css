@@ -128,7 +128,7 @@ nav a:hover {
 /* メインコンテンツのスタイル */
 main {
     padding: 20px;
-    max-width: 900px;
+    max-width: 900px; /* Adjust max-width if necessary to accommodate image */
     margin: 20px auto;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -184,6 +184,8 @@ main {
     border-left: 5px solid #4caf50; /* 左側に緑のボーダー */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    /* 親要素がfloatをクリアできるようにする */
+    overflow: hidden; /* Ensures that floated children are contained within the parent */
 }
 
 .schedule-entry h3 {
@@ -195,6 +197,17 @@ main {
 .schedule-entry p {
     margin-bottom: 5px;
     color: #555;
+}
+
+/* 時間割エントリー内の画像のスタイル */
+.schedule-entry img {
+    max-width: 40%; /* 親要素の幅の40%に画像を制限（調整可能） */
+    height: auto; /* 高さは元の比率を維持 */
+    float: right; /* テキストの右側に画像を配置し、テキストを回り込ませる */
+    margin-left: 15px; /* 画像の左側に余白を追加（テキストとの間隔） */
+    border-radius: 8px; /* 角を丸くする（オプション） */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 影を追加（オプション） */
+    box-sizing: border-box; /* paddingやborderをwidth/heightに含める */
 }
 
 /* レスポンシブデザイン */
@@ -220,6 +233,13 @@ main {
     .class-timetable td {
         padding: 5px; /* Smaller padding on small screens */
         font-size: 0.9em;
+    }
+    /* 小さい画面での画像のスタイル調整 */
+    .schedule-entry img {
+        float: none; /* floatを解除して、画像がテキストの上に配置されるようにする */
+        display: block; /* ブロック要素にして中央揃えしやすくする */
+        margin: 10px auto; /* 上下の余白と中央揃え */
+        max-width: 80%; /* 幅を画面サイズに合わせて調整 */
     }
 }
 
